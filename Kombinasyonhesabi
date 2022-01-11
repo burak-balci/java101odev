@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int n,r,fark,sayac,toplamn = 1,toplamr = 1,toplamfark =1,komb;
+
+        System.out.print("N Giriniz : ");
+        n = input.nextInt();
+        System.out.print("R Giriniz : ");
+        r = input.nextInt();
+
+        fark =n-r;
+
+        for(sayac = 1;sayac <= n;sayac++){
+            toplamn = toplamn * sayac;
+        }
+        for(sayac = 1;sayac <= r;sayac++){
+            toplamr = toplamr * sayac;
+        }
+        for(sayac = 1;sayac <= fark;sayac++){
+            toplamfark = toplamfark * sayac;
+        }
+
+        komb = toplamn/(toplamr*toplamfark);
+        System.out.print("N ve R Kombinasyonu : " + komb);
+    }
+}
