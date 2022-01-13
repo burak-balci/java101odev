@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Sayıyı Giriniz : ");
+        int number = input.nextInt();
+        double total=0;
+
+        for(double i = 1;i <= number;i++){
+            total += (1 / i);
+
+        }
+        System.out.print(number + " Sayısının Harmonik Biçimi : " + total);
+    }
+}
